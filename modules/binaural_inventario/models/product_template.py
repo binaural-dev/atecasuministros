@@ -17,7 +17,6 @@ class ProductTemplateBinauralInventario(models.Model):
 		'default_code_unique', 'unique(default_code)', "¡La referencia interna debe ser única! Por favor, elija otro."),
 	]
 	sales_policy = fields.Integer("Politica de Ventas", default=0)
-	# policy_error = fields.Boolean(default=False)
 	available_qty = fields.Float(
 		'Disp por Vender', compute='_compute_available_qty', compute_sudo=False, digits='Product Unit of Measure',
 		store=True)

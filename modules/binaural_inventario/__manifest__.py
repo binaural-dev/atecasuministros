@@ -19,7 +19,7 @@
     'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['stock', 'binaural_contactos_configuraciones', 'sale'],
+    'depends': ['stock', 'binaural_contactos_configuraciones', 'sale', 'web', 'website', 'website_sale'],
 
     # always loaded
     'data': [
@@ -28,7 +28,8 @@
         'views/res_config.xml',
         'views/stock_picking.xml',
         'views/product_template.xml',
-        # 'views/templates_inherited.xml',
+        'views/template_assets.xml',
+        'views/ecommerce_template.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
