@@ -1,4 +1,4 @@
-odoo.define("binaural_inventario.inherit_website_sale", function(require) {
+odoo.define("binaural_politica_de_ventas_ecommerce.inherit_website_sale", function(require) {
     'use strict';
 
     var core = require("web.core");
