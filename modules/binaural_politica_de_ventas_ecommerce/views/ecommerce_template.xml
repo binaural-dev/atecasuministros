@@ -3,8 +3,8 @@
 
     <template id="binaural_product_qty" inherit_id="website_sale.product_quantity">
         <xpath expr="//div[hasclass('css_quantity')]/input[@name='add_qty']" position="replace">
-            <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="product.sales_policy"/>
-            <input type="hidden" class="form-control sales_policy" name="sales_policy" t-att-value="product.sales_policy" />
+            <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="product.sales_policy or 1"/>
+            <input type="hidden" class="form-control sales_policy" name="sales_policy" t-att-value="product.sales_policy or 1" />
         </xpath>
     </template>    
     <template id="binaural_cart_line" name="template_name" inherit_id="website_sale.cart_lines">
