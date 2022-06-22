@@ -17,7 +17,6 @@
                         </div>
                         <div class="o_setting_right_pane">
                             <span class="o_form_label">No Permitir Costo Mayor al Precio</span>
-                            
                         </div>
                     </div>
                     <div class="col-3 col-lg-3 o_setting_box">
@@ -75,6 +74,17 @@
                         </div>
                         <div class="o_setting_right_pane">
                             <span class="o_form_label">No Permitir que el producto pueda tener mas un impuesto asignado</span>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <div class="mt16 row">
+                                   <field name="overdraw_inventory" class="oe_inline" required="1"/>
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">No permitir sobregirar inventario al vender productos</span>
                             
                         </div>
                     </div>
