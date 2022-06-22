@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "binaural inventario",
+    'name': "Binaural Politica de Ventas para Ecommerce",
 
     'summary': """
-        Modulo para el proceso de Inventario """,
+        Modulo para manejar las politicas de ventas en el apartado de ecommerce. """,
 
     'description': """
         Modulo para el manejo de multimonedas
@@ -15,23 +15,18 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Inventory/Inventory',
+    'category': 'Inventory/Website',
     'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['stock', 'binaural_contactos_configuraciones', 'sale'],
+    'depends': ['binaural_inventario', 'web', 'website', 'website_sale'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'security/security.xml',
-        'views/res_config.xml',
-        'views/stock_picking.xml',
-        'views/product_template.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        'views/template_assets.xml',
+        'views/ecommerce_template.xml',
     ],
     'application':True,
 }
+
