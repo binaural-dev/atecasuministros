@@ -109,6 +109,6 @@ class PurchaseOrderBinauralInventario(models.Model):
             'location_dest_id': self._get_destination_location(),
             'location_id': self.partner_id.property_stock_supplier.id,
             'company_id': self.company_id.id,
-            'foreign_currency_rate': self.foreign_currency_rate,
-            'foreign_currency_id': self.foreign_currency_id.id,
+            # 'foreign_currency_rate': self.foreign_currency_rate,
+            # 'foreign_currency_id': self.foreign_currency_id.id,
         }

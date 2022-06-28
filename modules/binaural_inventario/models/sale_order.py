@@ -17,7 +17,7 @@ class SaleOrderInherited(Model):
                 product = self._check_order_lines(sale_order.order_line)
                 if product:
                     raise ValidationError(_(f"El producto {product.name} tiene una política de ventas, la cantidad a vender" 
-                                            f"debe ser un múltiplo de sí mismo o {product.sales_policy}"))
+                                            f"debe ser un multiplo {product.sales_policy}"))
                     
     @api.constrains('order_line')
     def _check_qty_available(self):
