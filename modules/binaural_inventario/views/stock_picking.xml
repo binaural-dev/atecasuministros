@@ -6,11 +6,11 @@
             <field name="model">stock.picking</field>
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='origin']" position="after">
+                <!-- <xpath expr="//field[@name='origin']" position="after">
                     <field name="foreign_currency_id"/>
                     <field name="foreign_currency_rate"/>
                     <field name="update_cost_inventory" attrs="{'invisible': [('picking_type_code', '=', 'internal')]}"/>
-                </xpath>
+                </xpath> -->
 
                 <!--restringir boton cancelar reserva a solo los que tienen permiso adecuado-->
                 <xpath expr="//button[@name='do_unreserve']" position="replace">

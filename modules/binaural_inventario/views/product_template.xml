@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="stock.product_template_form_view_procurement_button"/>
             <field name="arch" type="xml">
                 <!--agregar campo disp por vender en el header-->
-                <xpath expr="//button[@name='action_open_quants']" position="before">
+                <!-- <xpath expr="//button[@name='action_open_quants']" position="before">
                     <button type="object" name="button_dummy" attrs="{'invisible':[('type', '!=', 'product')]}"
                             class="oe_stat_button"
                             icon="fa-cube"
@@ -22,7 +22,7 @@
                             <span class="o_stat_text">Disp por Vender</span>
                         </div>
                     </button>
-                </xpath>
+                </xpath> -->
                 <!--mostrar boton de actualizar cantidad solo a usuarios con el permiso de actualizar cantidades en inventario-->
                 <xpath expr="//button[@name='action_update_quantity_on_hand']" position="replace">
                     <button string="Actualizar la Cantidad" type="object"
