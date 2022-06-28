@@ -35,7 +35,7 @@ class StockMoveBinauralInventario(models.Model):
 				'stock_move_id': self.id,
 				'stock_valuation_layer_ids': [(6, None, [svl_id])],
 				'move_type': 'entry',
-				'foreign_currency_rate': self.picking_id.foreign_currency_rate if self.picking_id.foreign_currency_rate else def_rate,
+				# 'foreign_currency_rate': self.picking_id.foreign_currency_rate if self.picking_id.foreign_currency_rate else def_rate,
 			})
 			new_account_move._post()
 
