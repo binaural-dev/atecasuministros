@@ -38,14 +38,9 @@ odoo.define("binaural_politica_de_ventas_ecommerce.inherit_website_sale", functi
             const currentQty = $input.val();
             const salesPolicy = $input.closest('.input-group').find('input.sales_policy').val();
 
-            console.log("_onChangeSalesPolicy event: ", ev);
-            console.log("El input es: ", $input);
-            console.log("El valor es: ", currentQty);         
-            console.log("El salesPolicy es: ", salesPolicy);
-            console.log("El seils poliji: ", $input.closest('.input-group').find('input.sales_policy'));
-
             if ((currentQty % salesPolicy) !== 0) {
-                $input.val(Math.round(currentQty / salesPolicy) * salesPolicy);
+                const newQty = Math.round(currentQty / salesPolicy) * salesPolicy;
+                $input.val(newQty);
             }
 
         }
