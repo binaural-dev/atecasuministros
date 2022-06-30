@@ -9,7 +9,7 @@
     </template>    
     <template id="binaural_cart_line" name="template_name" inherit_id="website_sale.cart_lines">
         <xpath expr="/t[1]/table[1]/tbody[1]/t[1]/tr[1]/td[4]/div[1]/input[1]" position="after">
-            <input type="hidden" class="form-control sales_policy" name="sales_policy" t-att-value="line.product_id.sales_policy" />
+            <input type="hidden" class="form-control sales_policy" name="sales_policy" t-att-value="line.product_id.sales_policy or 1" />
         </xpath>
     </template>
 </odoo>
