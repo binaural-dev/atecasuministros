@@ -34,7 +34,7 @@ class SaleOrderInherited(Model):
     def _check_order_lines(self, sale_order_line):
         for line in sale_order_line:
             product = line.product_id
-            if product.sales_policy > 1 and product.available_qty >= product.sales_policy and (line.product_uom_qty % product.sales_policy) != 0:
+            if product.sales_policy > 1 and (line.product_uom_qty % product.sales_policy) != 0:
                 return product
         
         return False
