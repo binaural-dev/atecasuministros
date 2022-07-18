@@ -103,10 +103,10 @@ class InheritWebsiteSale(WebsiteSale):
         return super().payment_validate(transaction_id, sale_order_id, **post)
     
     
-    # @has_logged
-    # @http.route(['/shop/terms'], type='http', auth="public", website=True, sitemap=True)
-    # def terms(self):
-    #     return super().terms()
+    @has_logged
+    @http.route(['/shop/terms'], type='http', auth="public", website=True, sitemap=True)
+    def terms(self):
+        return super().terms()
     
     @has_logged
     @http.route(['/shop/confirmation'], type='http', auth="public", website=True, sitemap=False)
@@ -149,7 +149,7 @@ class InheritWebsiteSale(WebsiteSale):
     @has_logged
     @http.route('/shop/products/autocomplete', type='json', auth='public', website=True)
     def products_autocomplete(term, options={}, **kwargs):
-        return super().products_autocomplete(term, options, **kwargs)
+        return super().products_autocomplete(term=term, options=options, **kwargs)
     
     @has_logged
     @http.route('/shop/products/recently_viewed', type='json', auth='public', website=True)
