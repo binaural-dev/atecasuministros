@@ -103,10 +103,10 @@ class InheritWebsiteSale(WebsiteSale):
         return super().payment_validate(transaction_id, sale_order_id, **post)
     
     
-    @has_logged
-    @http.route(['/shop/terms'], type='http', auth="public", website=True, sitemap=True)
-    def terms(self, **kw):
-        return super().terms(**kw)
+    # @has_logged
+    # @http.route(['/shop/terms'], type='http', auth="public", website=True, sitemap=True)
+    # def terms(self):
+    #     return super().terms()
     
     @has_logged
     @http.route(['/shop/confirmation'], type='http', auth="public", website=True, sitemap=False)
