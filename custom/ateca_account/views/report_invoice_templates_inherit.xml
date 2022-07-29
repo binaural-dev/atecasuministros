@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_ateca" inherit_id="account.report_invoice_document">
+	<xpath expr="//t[@t-call='web.external_layout']" position="attributes">
+            <attribute name="t-call">ateca_account.internal_layout_ateca</attribute>
+        </xpath>
+
+	<xpath expr="//th[@name='th_quantity']" position="replace">
+	    <th name="th_quantity" class="text-right"><span>Cantidad</span></th>
+	    <th name="th_uom" class="text-right" groups="uom.group_uom">
+		<span>Unidad de medida</span>
+	    </th>
+	</xpath>
+
+	<xpath expr="//th[@name='th_taxes']" position="replace"/>
+
+	<xpath expr="//t[@name='account_invoice_line_accountable']//td[@class='text-right']" position="replace">
+	    <td class="text-right"><span t-field="line.quantity"/></td>
+	    <td class="text-right" groups="uom.group_uom">
+		<span t-field="line.product_uom_id"/>
+	    </td>
+	</xpath>
+
+	<!-- td de impuestos -->
+	<xpath expr='//td[6]' position="replace"/>
+
+	<xpath expr="//t[@t-foreach='o.amount_by_group']" position="replace"/>
+    </template>
+</odoo>
