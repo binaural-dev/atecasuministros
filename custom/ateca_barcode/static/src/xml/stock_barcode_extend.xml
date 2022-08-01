@@ -1,0 +1,18 @@
+<templates id="template" xml:space="preserve">
+    <t t-inherit="stock_barcode.stock_barcode_lines_template" t-inherit-mode="extension">
+	<xpath expr="//div/button[hasclass('o_add_unit')]" position="replace">
+	    <button t-if="!isPickingRelated || (line.product_id.tracking !== 'serial')"
+                    class="o_hidden o_line_button o_add_unit btn btn-primary ml-2 ml-sm-4"
+                    t-att-data-reserved="(line.product_uom_qty - line.qty_done)">
+				+ 1
+	    </button>
+	</xpath>
+        <xpath expr="//div/button[hasclass('o_add_reserved')]" position="replace">
+	    <button t-if="istouchSupported &amp;&amp; isPickingRelated &amp;&amp; (line.product_id.tracking !== 'serial')"
+                    class="o_hidden o_line_button o_add_reserved btn btn-primary ml-2 ml-sm-4"
+                    t-att-data-reserved="(line.product_uom_qty - line.qty_done)">
+		<t t-esc="'+ ' + (line.product_uom_qty - line.qty_done)"/>
+	    </button>
+	</xpath>
+    </t>
+</templates>
