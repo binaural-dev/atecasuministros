@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <template id="assets_backend" name="stock_barcode assets" inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/ateca_barcode/static/src/js/stock_barcode_extend.js"></script>
+                <script type="text/javascript" src="/ateca_barcode/static/src/js/line_widget_extend.js"></script>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
